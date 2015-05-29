@@ -1,0 +1,27 @@
+<ion-view view-title="Servers">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="server in servers" type="item-text-wrap" href="#/tab/servers/{{server.id}}">
+          <i class="icon {{server.platformIcon}}"></i>
+          <div class="row">
+            <div class="col">
+              <h2>{{server.agentName}}</h2> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              {{server.instanceType}}
+            </div>
+            <div class="col">
+              <i class="icon-left {{server.stateIcon}}"></i>
+              {{server.instanceState}}
+            </div>
+          </div>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+          <ion-option-button class="button-assertive">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

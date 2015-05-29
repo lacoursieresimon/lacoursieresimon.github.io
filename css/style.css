@@ -1,0 +1,21 @@
+/* Empty. Add your own CSS if you like */
+.custom-icon {
+  border:1px solid white;
+  color : white;
+}
+
+.icon-red{
+  color:red;
+}
+
+.icon-green{
+  color:green;
+}
+
+.title-white{
+  color:white;
+}
+
+.close-button{
+  color:white !important;
+}

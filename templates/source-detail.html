@@ -1,0 +1,39 @@
+<ion-view view-title="{{source.name}}">
+    <ion-content class="padding">
+        <div class="list card">
+
+            <div class="item item-icon-left">
+                <i class="icon {{source.sourceIcon}}"></i>
+                <h2>{{source.information.sourceStatus.type}}</h2>
+                <p>{{source.information.sourceStatus.timestamp}}</p>
+            </div>
+
+            <div class="item item-body">
+                <p>
+                    <h3>Last operation</h3>
+                    {{source.information.lastOperation.operationType}}
+                </p>
+                <p>
+                    <h4>Time stamp</h4>
+					{{source.information.lastOperation.timestamp}}
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-refresh"></i>
+                    Refresh
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-hammer"></i>
+                    Rebuild
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-trash-a"></i>
+                    Delete
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
