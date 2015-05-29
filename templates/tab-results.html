@@ -10,13 +10,16 @@
   </button>
 </div>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-left" ng-repeat="result in results" type="item-text-wrap"">
+      <ion-item class="item-remove-animate item-avatar item-icon-left" ng-repeat="result in results" type="item-text-wrap">
+      <i class="icon ion-document-text"></i>
+      <a href="{{result.clickUri}}" target="_blank">
           <div class="row">
-            <div class="col"><i class="icon ion-document-text"></i>
+            <div class="col">
               <h2>{{result.title}}</h2> 
               <p style="display:inline;">File type : {{result.raw.filetype}}</p>
             </div>
           </div>
+      </a>
       </ion-item>
     </ion-list>
   </ion-content>
