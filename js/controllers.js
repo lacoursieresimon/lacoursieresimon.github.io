@@ -44,6 +44,8 @@ angular.module('starter.controllers', [])
   $scope.closeNewUser = function() { $scope.modal.hide(); };
   $scope.openNewUser = function() { $scope.modal.show(); };
   
+  $scope.sendInvite = { text:"Send email invite", checked: true};
+  
   $scope.doRefresh = function() {
     Users.reset();
     Users.all().then(function(result) { $scope.users = result; });
