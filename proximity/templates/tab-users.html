@@ -1,0 +1,13 @@
+<ion-view view-title="Reach" class="users">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item" ng-show="users.length == 0">
+        No users available at the moment
+      </ion-item>
+      <ion-item class="item item-avatar item-icon-left" ng-repeat="u in users" type="item-text-wrap">
+        <img ng-src="{{u.picture ? u.picture : 'img/person.png'}}">
+        <h2>{{u.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
