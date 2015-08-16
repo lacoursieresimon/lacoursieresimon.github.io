@@ -1,0 +1,34 @@
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+#wrapper {
+    display: block;
+}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+#main .previous,
+#main .next {
+    height: 100%;
+}
+#main .viewer {
+    height: auto;
+}
+#main .viewer .reel {
+    display: block;
+}
+#main .viewer .reel .slide {
+    margin: 0 auto;
+}
+#main .viewer .reel .slide article {
+    margin: 0 auto;
+    overflow: visible;
+    height: auto;
+    clear: both;
+}
+#main .viewer .reel .slide article .inner {
+    height: auto;
+}

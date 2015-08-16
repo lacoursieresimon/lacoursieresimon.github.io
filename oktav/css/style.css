@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'f-pro';
+    src: url('font/Familiar_Pro-Bold-webfont.woff') format('woff'), url('font/Familiar_Pro-Bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+html {
+    height: 100%;
+    background: url('images/bg1.jpg');
+}
+body {
+    background: url('images/bg4.png') center center no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    font-family: 'f-pro' !important;
+    font-size: 11pt;
+    position: absolute;
+    top: 0;
+    line-height: 1.75em;
+    color: #424548;
+    overflow-x: hidden !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'f-pro' !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #252b2f;
+    letter-spacing: 0.2em;
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+    font-weight: 300;
+}
+h2 {
+    margin: 0 0 0.75em 0;
+}
+h3 {
+    margin: 0 0 0.5em 0;
+}
+p,
+ul,
+ol {
+    margin: 0 0 1.5em 0;
+}
+p:last-child,
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+hr {
+    position: relative;
+    display: block;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    border-left: 0;
+    border-right: 0;
+    height: 10px;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+    margin: 1em 0 1em 0;
+}
+a {
+    color: #B80000;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+form label {
+    font-family: 'f-pro' !important;
+    display: block;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.image-left {
+    float: left;
+    width: 18em;
+    margin: 0.5em 2em 1em 0;
+}
+.image-full {
+    display: block;
+    width: 100%;
+}
+.image-full img {
+    display: block;
+    width: 100%;
+}
+ul ul li {
+    list-style-type: disc;
+    margin-left: 18px;
+    font-size: 80%;
+}
+ul ul {
+    margin: 0 0 0.5em 0;
+}
+.button {
+    font-family: 'f-pro' !important;
+    position: relative;
+    display: inline-block;
+    background: url('images/bg3.jpg');
+    color: #fff;
+    text-shadow: none;
+    text-decoration: none;
+    padding: 0.75em 60px 0.75em 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonSubmit {
+    padding: 0.75em 2.5em 0.75em 2.5em !important;
+}
+.button:before {
+    content: '';
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+    margin-top: -12px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('images/sprites.png') top left no-repeat;
+}
+input.button {
+    padding-right: 1.5em;
+}
+ul.contact li {
+    position: relative;
+    padding-left: 36px;
+    margin: 0 0 1em 0;
+}
+ul.contact li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: url('images/sprites.png') no-repeat;
+}
+ul.contact li.address:before {
+    background-position: -72px 0px;
+}
+ul.contact li.social:before {
+    background-position: -48px 0px;
+}
+ul.contact li.email:before {
+    background-position: -24px 0px;
+}
+ul.style1 li {
+    padding: 0.5em 0 0.5em 0;
+    border-top: solid 1px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+}
+ul.style1 li:first-child {
+    border-top: 0;
+    box-shadow: none;
+}
+.sidebarNoBorder span {
+    font-size: 13px !important;
+}
+.page-default img {
+    border-radius: 15px;
+}
+#slider img {
+    border-radius: 0px !important;
+}
+/*********************************************************************************/
+/* Poptrox                                                                       */
+/*********************************************************************************/
+
+.poptrox-popup {
+    background: #fff url('images/bg2.jpg') center center !important;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.poptrox-popup .closer {
+    background: url('images/bg3.jpg') !important;
+    box-shadow: inset 5px 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#header {
+    position: relative;
+    text-align: center;
+}
+#header nav {
+    position: relative;
+}
+#header nav a {
+    color: #8b97a1;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'f-pro' !important;
+    letter-spacing: 0.15em;
+    outline: 0;
+    transition: color .35s ease-in-out;
+    -moz-transition: color .35s ease-in-out;
+    -webkit-transition: color .35s ease-in-out;
+}
+#header nav a:hover {
+    color: #b80000;
+}
+#header h1 {
+    display: inline-block;
+    color: #B80000;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+#header h1 span {
+    font-weight: 300;
+    color: #a4b0bb;
+}
+#mainRedLogo {
+    width: 200px;
+    height: 83px;
+    background: url('../img/logos/WebLogoDouble.png') no-repeat;
+    background-size: 400px 83px;
+    background-position-x: -200px;
+}
+.logoHover,
+#mainRedLogo:hover {
+    background-position-x: 0px !important;
+}
+/*********************************************************************************/
+/* Instagram feed                                                                      */
+/*********************************************************************************/
+
+#instafeed {
+    margin: 0 auto;
+    text-align: center;
+}
+#pageHome {
+    text-align: center !important;
+}
+#slider {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 896px;
+    height: 285px;
+}
+#slides {
+    cursor: move;
+    overflow: hidden;
+    width: 896px;
+    height: 285px;
+    left: 0px;
+    top: 0px;
+}
+#videoDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+#videoDiv iframe {
+    margin: 1px 6px;
+}
+.error {
+    color: rgb(184, 0, 0);
+}
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+#footer {
+    font-family: 'f-pro' !important;
+    position: relative;
+    text-align: center;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 1em 0 2em 0;
+    line-height: 20px !important;
+}
+/*********************************************************************************/
+/* Span Social                                                           */
+/*********************************************************************************/
+
+.spanSocial img {
+    width: 36px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.spanSocial {
+    float: right;
+}
+#pageHome .spanSocial {
+    float: none;
+}
+.spanSocial a {
+    text-decoration: none !important;
+}
+#footer .spanSocial {
+    float: none;
+    display: none;
+}
