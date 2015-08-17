@@ -63,7 +63,7 @@
                     <img class="img-responsive circular" src="portfolio/img/pic.png" alt="">
                     <div class="intro-text">
                         <hr class="star-light">
-                        <span class="skills">Computer Science Student</span>
+                        <span class="skills">Simon Lacoursière</span>
                         <span class="school">@ Université de Sherbrooke</span>
                         <span class="resume">
                             Computer science student wishing to put his knowledge to work
@@ -190,9 +190,11 @@
         ];
         
         var videos = ['b4UaUk_DH-A', '3VNIChbhDuc', 'ePpIp2eD0Ok', 'rKSSbjkrIMM'];
+        var gtoken = '292fb' + '61047' + '00b3f' + '266d72' + '136c22393' + 'bdba139428';
         
         Github.userActivity({
                 username: 'lacoursieresimon',
+                OAuth: gtoken,
                 selector: '.github .activity'
         });
         
@@ -200,7 +202,7 @@
         var videoSize = { width:vidW, height:vidW/(16/9)  };
         
         _.each(repos, function(repo){ $('.repos').append('<div class="' + repo.r + '"></div>'); });
-        _.each(repos, function(repo){ Github.repoActivity({ username:repo.u, reponame:repo.r, selector:'.github .' + repo.r }); });
+        _.each(repos, function(repo){ Github.repoActivity({ username:repo.u, reponame:repo.r, selector:'.github .' + repo.r, OAuth: gtoken }); });
         _.each(videos, function(id){ $('.videos').append('<iframe width="' + videoSize.width +  '" height="' + videoSize.height + '" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen onresize="adjustVideos()"></iframe>'); });
         
     </script>
