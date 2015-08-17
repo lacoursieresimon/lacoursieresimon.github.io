@@ -199,6 +199,7 @@
         });
         
         var vidW = $(window).width() > 700 ? $(window).width() / 3 : $(window).width() / 1.6;
+        vidW = vidW > 500 ? 500 : (vidW < 300 ? 300 : vidW);
         var videoSize = { width:vidW, height:vidW/(16/9)  };
         
         _.each(repos, function(repo){ $('.repos').append('<div class="' + repo.r + '"></div>'); });
