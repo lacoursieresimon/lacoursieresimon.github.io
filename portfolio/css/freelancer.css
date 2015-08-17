@@ -488,13 +488,24 @@ footer .footer-below {
     display: inline-block;
     width: 48%;
     min-width:270px;
-    margin:0 5px;
+    margin:0 5px 20px 5px;
 }
 
 .github .repos > div .gt-container .gt-activity-cnt{
     height:150px;
 }
 
+.github .activity .gt-container .gt-activity-cnt{
+    height:225px;
+}
+
+.github {
+    text-align: center;
+}
+
+.github h3{
+    margin-top:20px;
+}
 
 .github .activity{
     margin: 0 1%;
