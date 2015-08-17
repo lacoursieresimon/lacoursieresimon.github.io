@@ -1,16 +1,14 @@
 # lacoursieresimon.github.io
-
-# OKTAV
 Portfolio of my projects
 
 Available here: [simonlacoursiere.me](http://simonlacoursiere.me)
 
-![Screenshots](http://raw.githubusercontent.com/lacoursieresimon/lacoursieresimon.github.io/master/portfolio/img/screenshot.jpg)
+![Screenshots](https://raw.githubusercontent.com/lacoursieresimon/lacoursieresimon.github.io/master/portfolio/img/screenshot.jpg)
 
 #
 #
 #### Description
-This website was developped by myself in a day using a simple [bootstrap template](http://startbootstrap.com/template-overviews/freelancer).
+This website was developped by myself in a day using a simple [bootstrap template](http://startbootstrap.com/template-overviews/freelancer) and adapting it to my liking.
 It showcases my github projects and my recent audio/video creations.
 
 #### Tools
