@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Simon Lacoursière - Resume</title>
+		<meta charset="utf-8" />
+		<link href='https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<script src="js/data.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+        <div class="header">
+			<div class="text-block">
+				<span class="title"></span>
+				<span class="subtitle"></span>
+				<span class="lang-dropdown">
+					<select onchange="generate()">
+						<option value="en">English</option>
+						<option value="fr">Français</option>
+					</select>
+				</span>
+			</div>
+		</div>
+		<div class="body">
+			<div class="page page1">
+				<div class="side"></div>
+				<div class="content">
+					<div class="interests"></div>
+					<div class="education"></div>
+					<div class="experience"></div>
+				</div>
+				<div class="footer"></div>
+			</div>
+			<div class="page page2">
+				<div class="side"></div>
+				<div class="content">
+					<div class="accomplishments"></div>
+					<div class="distinctions"></div>
+				</div>
+				<div class="footer"></div>
+			</div>
+		</div>
+	</body>
+	
+	<script>
+		var name = 'Simon Lacoursière';
+		var footers = [name, '14058958'];
+		
+		$(document).ready(function() {
+			generate();
+		});
+		
+		function generate(){
+			calcData();
+			$('.text-block .subtitle').html(l('computerScienceStudent') + ' | <a href="mailto:simon.lacoursiere@usherbrooke.ca">simon.lacoursiere@usherbrooke.ca</a>')
+			$('.text-block .title').html(name.split(' ')[0].toLowerCase() + '<span class="bold">' + name.split(' ')[1].toLowerCase() + '</span>');
+			
+			var sideAppend = '';
+    		_.each(sideNodes, function(node){ sideAppend += '<div class="node"><span class="title">' + node.title + '</span>' + node.content + '</div>'; });
+			$('.page1 .side').html(sideAppend);
+			
+			_.each(mainNodes, function(node) { $('.' + node.title).html(buildMainNode(node)); });
+			
+			for (var i = 0; i < $('.footer').length; i++){
+				var htmlBuilder = '';
+				_.each(footers, function(footer){ htmlBuilder += '<div>' + footer + '</div>'; });
+				$($('.footer')[i]).html(htmlBuilder += '<div>' + (i + 1) + '</div>');
+			}
+		}
+		
+		function buildMainNode(node){
+			var htmlBuilder = '<span class="title"><span style="color:' + node.color + '">' + node.displayedTitle.slice(0, 3) + '</span>' + node.displayedTitle.slice(3, (node.displayedTitle.length)) + '</span>';
+			htmlBuilder += node.content != null ? '<span class="content">' + node.content + '</span><span class="list">' : '<span class="list">';
+			
+			node.list.forEach(function(item) {
+				htmlBuilder += '<div class="item"><span class="header"><span class="title">' 
+							+ item.title + '</span><span class="date">' 
+							+ item.date + '</span></span><ul class="detail">';
+							
+				_.each(item.content, function(cont){ htmlBuilder += '<li>' + cont + '</li>'; });
+				
+				htmlBuilder += '</ul></div>';
+			});
+			
+			return htmlBuilder + '</span>';
+		}
+	</script>
+</html>
