@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="keywords" content="yoga, andreanne, andréanne, abel, yogi, spiritual, meditation, health, fitness, wellbeing, wanderlust">
+    <meta name="description" content="Andreanne Abel's yoga portfolio">
 
-    <title>Andreanne Abel</title>
+    <title>Andreanne Abel's portfolio</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,9 +49,6 @@
             <li>
                 <a href="#insta" onclick = $("#menu-close").click(); >Instagram feed</a>
             </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
-            </li>
         </ul>
     </nav>
 
@@ -59,7 +56,7 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Andreanne Abel</h1>
-            <h3>Yoga adept, tea lover & health lifestyle specialist </h3>
+            <h3>Enthousiastic yogi, upbeat and excellent team player</h3>
             <br>
             <a href="#bio" class="btn btn-dark btn-lg">Find out more about me!</a>
         </div>
@@ -72,10 +69,28 @@
                 <div class="col-lg-12 text-center">
                     <h2>Bio</h2>
                     <hr class="small">
-                    <p class="lead">Hello, my name is Andreanne and I am a pretty girl.
+                    <p class="lead">Hello, my name is Andreanne.
                         <br/>
                         <br/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices turpis at orci tristique, sed cursus diam sollicitudin. Maecenas et porttitor lacus, sit amet luctus mi. Ut accumsan purus non bibendum sodales. Nullam a pretium est, non maximus ante. Sed mollis laoreet erat egestas blandit. Curabitur gravida turpis sit amet placerat vestibulum. Etiam lacinia iaculis felis, ut tincidunt magna mollis sed. Mauris porta turpis lacinia enim porta ultricies. Nulla facilisi. In a metus ac mi pulvinar auctor et id nulla. Phasellus eu sapien sit amet lacus porttitor bibendum id in turpis.
+                        I am a graduating student in Civil Engineering looking to enhance my yoga 
+                        practice while living the healthiest lifestyle. 
+                        <br/>
+                        I believe that consistency 
+                        is key and that we shall make our best to love each other and be kind. 
+                        <br/>
+                        I aim to be an inspiration for my surrounding toward my lifestyle. 
+                        <br/>
+                        I enjoy to hike or simply walk in the city. 
+                        <br/>
+                        I try to make the most of life and be grateful for small and big moments. 
+                        <br/>
+                        I love fashion especially sport wear. 
+                        <br/>
+                        Born in Val d’Or, I studied in Sherbrooke and 
+                        I am moving in Montreal for 2016. 
+                        <br/>
+                        My main goal is to strengthen my practice and 
+                        work toward the best version of myself.
                     </p>
                 </div>
             </div>
@@ -110,20 +125,20 @@
                     <h4><strong>Andreanne Abel</strong>
                     </h4>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (819) 456-7890</li>
+                        <li><i class="fa fa-phone fa-fw"></i> (819) 578-5374</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:andreanne_abel@hotmail.com">andreanne_abel@hotmail.com</a>
                         </li>
                     </ul>
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/andreanne.abel"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            <a target="_blank" href="https://ca.linkedin.com/in/andréanne-abel-153426a3"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/andree_14/"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
                     <hr class="small">
@@ -132,26 +147,25 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/instafeed.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
     
     var feed = new Instafeed({
         get: 'user',
-        userId : '513890603',
-        accessToken: '513890603.467ede5.8946856e90cc46c88c5818bfe3506c85',
+        userId : '28901711',
+        accessToken: '28901711.1677ed0.c407824ed4a3436abd7dd3d7d8d8cef6',
         resolution: 'standard_resolution',
         template: '<div class="col-md-4"><a target="_blank" href="{{link}}"><img src="{{image}}" /></a></div>',
+        filter: function(image) {
+            return $.inArray("yoga", image.tags) == -1;   
+        }
     });
     
     feed.run();
+    
     $("#menu-close").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
