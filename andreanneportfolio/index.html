@@ -159,8 +159,9 @@
         accessToken: '28901711.1677ed0.c407824ed4a3436abd7dd3d7d8d8cef6',
         resolution: 'standard_resolution',
         template: '<div class="col-md-4"><a target="_blank" href="{{link}}"><img src="{{image}}" /></a></div>',
+        sortBy: "most-recent",
         filter: function(image) {
-            return $.inArray("yoga", image.tags) == -1;   
+            return !($.inArray("yoga", image.tags) == -1);   
         }
     });
     
