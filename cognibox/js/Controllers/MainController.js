@@ -145,7 +145,7 @@ angular.module('grocery.controllers')
             $http.post(baseUrl + "pdf", p ).then(function(pdf){
                 var confirmPopup = $ionicPopup.confirm({
                     title: 'Ouverture du cirulaire',
-                    template: 'Voulez-vous ouvrir le circulaire généré?'
+                    template: '<a href="' + pdf.data.url + '" data-ajax="false">Link</a>'
                 });
 
                 confirmPopup.then(function(res) {
