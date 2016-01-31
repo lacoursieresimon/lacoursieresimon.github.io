@@ -1,0 +1,23 @@
+ <ion-modal-view>
+    <ion-header-bar class='bar-assertive'>
+      <h1 class="title">Code postal</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list">
+            <div class="item item-divider">
+                Veuillez entrer votre code postal
+            </div>
+            
+            <label class="item">
+                <button class="button button-block button-assertive" ng-click='detectPosition(data.postalCode)' type="submit">Détecter ma position</button>
+            </label>
+            
+            <label class="item item-input">
+                <input id="pc_modal" type="text" ng-model="data.postalCode" placeholder="Format : A1A 1A1">
+            </label>
+            <label class="item">
+                <button class="button button-block button-assertive" ng-click='submitPostalCode(data.postalCode)' ng-disabled="validatePostalCode(data.postalCode)" type="submit">Soumettre</button>
+            </label>
+        </div>
+    </ion-content>
+  </ion-modal-view>

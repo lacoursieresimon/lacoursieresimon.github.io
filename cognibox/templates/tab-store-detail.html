@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-nav-title>{{store.name}}</ion-nav-title>
+  <ion-content>
+    <ion-list>
+        <ion-item class="item-thumbnail-left">
+            <img ng-src="{{util.getLogo(store.banner_code)}}">
+            <h2>{{store.name}}</h2>
+            <p>{{store.address}}{{store.address ? ',' : ''}}  {{store.city}}</p>
+            <p><i class="icon-left ion-location"></i> {{store.distance}} km </p>
+        </ion-item>
+        <ion-item ng-show="store.phone">
+          <div class="button icon-left button-full button-balanced">
+            <a ng-href="tel: {{store.phone}}">Appeler {{ store.phone }}</a>
+          </div>
+        </ion-item>
+        <ion-item class="item-body">
+            <div id="map" class="google-map" data-tap-disabled="true"></div>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

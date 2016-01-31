@@ -1,0 +1,42 @@
+<ion-view>
+  <ion-nav-title>{{product.title_fr}}</ion-nav-title>
+  <ion-content class="padding">
+    <ion-list class="card">
+      <ion-item class="item-thumbnail-left">
+        <img ng-src="{{util.getLogo(product.banner_code)}}">
+        <h2>{{product.title_fr}}</h2>
+        <p ng-show="{{product.category_fr}}">Catégorie : {{product.category_fr}}</p>
+        <h2 class="assertive">Prix: {{product.price}}</h2>
+        <p>{{product.effective_start_date | date:"MM/dd/yyyy"}} à {{product.effective_end_date | date:"MM/dd/yyyy"}}</p>
+      </ion-item>
+      <ion-item class="item item-icon-right" href="#/tab/item/store/single/{{nearStore.guid}}">
+        <h2>Disponible chez {{nearStore.name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      <div class="item item-body product-image">
+        <img class="full-image" ng-src="{{product.image}}">
+      </div>
+      <ion-item class="item">
+        <button class="button button-full button-balanced" ng-click="addCart(product)">
+          Ajouter
+        </button>
+      </ion-item>
+      <ion-item class="item">
+        <h2>Articles recommendés</h2>
+      </ion-item>
+      <ion-list>
+        <ion-item class="item-thumbnail-left item-icon-right"
+                  collection-repeat="product in recommendedProducts" type="item-text-wrap"
+                  href="#/tab/{{controller}}/{{isNested?product.category_id+'/':''}}{{product.identifier}}/{{product.publication_id}}">
+          <img ng-src="{{product.image.indexOf('noimage') == -1 ? product.image : util.getLogo(product.banner_code)}}">
+          <h2>{{product.title_fr}}</h2>
+          <p>{{product.price}} {{product.price_unit}}</p>
+          <div class="hide">{{product.words}}</div>
+          <p><img ng-src="{{util.getLogo(product.banner_code)}}" class="mini-grocery-logo"></p>
+          <ion-option-button class="button-balanced ion-plus-round" ng-click="addCart(product);"></ion-option-button>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </ion-content>
+</ion-view>

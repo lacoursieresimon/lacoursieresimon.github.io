@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-nav-title>{{product.title_fr}}</ion-nav-title>
+  <ion-content class="padding">
+    <ion-list class="card">
+
+      <ion-item class="item-thumbnail-left">
+        <img ng-src="{{util.getLogo(product.banner_code)}}">
+        <h2>{{product.title_fr}}</h2>
+        <p ng-show="{{product.category_fr}}">Catégorie : {{product.category_fr}}</p>
+        <h2 class="assertive">Prix: {{product.price}}</h2>
+        <p>{{product.effective_start_date | date:"MM/dd/yyyy"}} à {{product.effective_end_date | date:"MM/dd/yyyy"}}</p>
+      </ion-item>
+      
+      <ion-item class="item item-icon-right" href="#/tab/cart/store/single/{{nearStore.guid}}/{{product.banner_code}}">
+        <h2>Disponible chez {{nearStore.name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      
+      <div class="item item-body product-image">
+        <img class="full-image" ng-src="{{product.image}}">
+      </div>
+      
+    </ion-list>
+  </ion-content>
+</ion-view>
