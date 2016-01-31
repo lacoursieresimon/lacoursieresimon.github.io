@@ -150,7 +150,8 @@ angular.module('grocery.controllers')
 
                 confirmPopup.then(function(res) {
                     if(res) {
-                        window.open(pdf.data.url, '_system', 'location=no');
+                    	var win = window.open(pdf.data.url, '_blank');
+  						win.focus();
                     }
                 });
                 
