@@ -1,6 +1,6 @@
 <ion-view>
   <ion-nav-title>{{store.name}}</ion-nav-title>
-  <ion-content>
+  <ion-content ng-init="init()">
     <ion-list>
         <ion-item class="item-thumbnail-left">
             <img ng-src="{{util.getLogo(store.banner_code)}}">

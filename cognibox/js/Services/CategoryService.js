@@ -18,7 +18,6 @@ angular.module('grocery.services')
       },
       allFromCategory: function (categoryId)
       {
-        console.log(categoryId)
         return Items.all().then(function (products)
         {
           var dataz = _.filter(products, function (product)

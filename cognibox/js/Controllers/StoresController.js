@@ -1,6 +1,6 @@
 angular.module('grocery.controllers')
 .controller('StoresController', function($scope, $rootScope, $stateParams, $ionicLoading, Stores) {
-    
+
     $scope.refresh = function(){
         Stores.all().then(function(data) {
             $scope.stores = data;
@@ -8,13 +8,13 @@ angular.module('grocery.controllers')
             $ionicLoading.hide();
         });
     }
-    
+
     $scope.$on('refresh', function(event, args) {
         $scope.refresh();
     });
-    
+
     if ($rootScope.data.postalCode != ''){
-        $ionicLoading.show({ template: 'Loading...' });
+        $ionicLoading.show({ template: 'Chargement...' });
         $scope.refresh();
     }
 });

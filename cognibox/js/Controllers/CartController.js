@@ -44,6 +44,7 @@ angular.module('grocery.controllers')
         var product = _.findWhere($scope.cartProducts, {identifier: product.identifier});
         $scope.cartProducts = _.without($scope.cartProducts, product);
         localStorage.setObject("cartProducts", $scope.cartProducts);
+        $scope.getTotal();
       }
     };
   });

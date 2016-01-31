@@ -1,11 +1,22 @@
 angular.module('grocery.controllers')
-.controller('MainController', function($scope, $http, $rootScope, $stateParams, $state, $ionicModal, $ionicSideMenuDelegate, $ionicLoading, $ionicPopup, $ionicListDelegate, Cart, Stores) {
+.controller('MainController', function($scope, $http, $rootScope, $stateParams, $state, $ionicModal, $ionicSideMenuDelegate, $ionicLoading, $ionicPopup, $ionicListDelegate, Cart, Stores, $cordovaGeolocation) {
 
-    var regex = new RegExp(/^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i);
+  moment.locale('fr');
+
+  var regex = new RegExp(/^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i);
     var newMarket = market;
     $rootScope.data = {
         postalCode: localStorage.getItem("postalCode") || ''
     };
+
+  $rootScope.show = function() {
+    $ionicLoading.show({
+      template: 'Chargement...'
+    });
+  };
+  $rootScope.hide = function(){
+    $ionicLoading.hide();
+  };
 
     $scope.cartBadge = util.sumCart();
 
@@ -20,7 +31,7 @@ angular.module('grocery.controllers')
     };
 
     $scope.submitPostalCode = function(code){
-        $ionicLoading.show({ template: 'Loading...' });
+      $rootScope.show();
         $rootScope.data.postalCode = code.toUpperCase();
 
         if ($rootScope.data.postalCode.length == 7){
@@ -47,10 +58,15 @@ angular.module('grocery.controllers')
     }
 
   $scope.detectPosition = function(){
-    $ionicLoading.show({ template: 'Loading...' });
-    if (navigator.geolocation) {
+    $ionicLoading.show({ template: 'Chargement...' });
+    var options = {timeout: 10000, enableHighAccuracy: true};
+            $cordovaGeolocation.getCurrentPosition(options).then(
+            $scope.getPostalCode,function(error){
+                $ionicLoading.show({ template: JSON.stringify(error) });
+            });
+    /*if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition($scope.getPostalCode);
-    }
+    }*/
   }
 
   $scope.setLatLng = function(){
@@ -67,7 +83,6 @@ angular.module('grocery.controllers')
         $scope.setLatLng();
 
   $scope.getPostalCode = function(position){
-      $ionicLoading.show({ template: 'Loading...' });
       $rootScope.data.latlng = {lat: position.coords.latitude, lng: position.coords.longitude};
       var geocoder= new google.maps.Geocoder();
       geocoder.geocode({'location': $rootScope.data.latlng}, function(results, status) {
@@ -123,10 +138,10 @@ angular.module('grocery.controllers')
         if (Cart.all().length > 0)
             $state.go('tab.cart-map')
     };
-    
+
     $scope.flyerQuery = function(stores, products){
         var validStores = {};
-        
+
         products.forEach(function(product){
             var store = _.find(stores, function(s){ return s.banner_code == product.banner_code; });
             if (!validStores[store.banner_code]){
@@ -141,23 +156,16 @@ angular.module('grocery.controllers')
                     pubguid: product.publication_id }
                 })
             };
-            
+            $ionicLoading.show({template:"Chargement..."});
             $http.post(baseUrl + "pdf", p ).then(function(pdf){
-                var confirmPopup = $ionicPopup.confirm({
+                $ionicLoading.hide();
+                var alertPopup = $ionicPopup.alert({
                     title: 'Ouverture du cirulaire',
-                    template: '<a href="' + pdf.data.url + '" data-ajax="false">Link</a>'
+                    template: '<a href="' + pdf.data.url + '" data-ajax="false">Ouvrir le document</a>'
                 });
-
-                confirmPopup.then(function(res) {
-                    if(res) {
-                    	var win = window.open(pdf.data.url, '_blank');
-  						win.focus();
-                    }
-                });
-                
             });
     };
-    
+
     $scope.getFlyer = function(){
         products = Cart.all();
         if (products.length > 0){
@@ -184,13 +192,13 @@ angular.module('grocery.controllers')
             });
          }
     };
-    
+
 
   $scope.showPopupQuantity = function (product)
   {
     $scope.data.cartQuantity = product.CartQuantity;
     $ionicPopup.show({
-      template: '<input type="number" ng-model="data.cartQuantity">',
+      template: '<input type="number" min="1" ng-model="data.cartQuantity">',
       title: 'Entrer la quantité de votre item',
       subTitle: 'Entrer un nombre',
       scope: $scope,

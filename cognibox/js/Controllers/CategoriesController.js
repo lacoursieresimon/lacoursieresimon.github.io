@@ -14,7 +14,7 @@ angular.module('grocery.controllers')
     });
 
     if ($rootScope.data.postalCode != ''){
-        $ionicLoading.show({ template: 'Loading...' });
+        $ionicLoading.show({ template: 'Chargement...' });
       $scope.refresh();
     }
   });

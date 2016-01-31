@@ -42,6 +42,8 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
 
     <!-- your app's js -->
     <script src="js/util.js"></script>
@@ -63,7 +65,7 @@
     <script src="js/Services/CartService.js"></script>
 
   </head>
-  <body ng-app="grocery" ng-controller="MainController">
+  <body ng-app="grocery" ng-controller="MainController" class="platform-cordova">
     
     <ion-side-menus enable-menu-with-back-views="false">
       <ion-side-menu-content>
