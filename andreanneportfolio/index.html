@@ -63,7 +63,7 @@
     </header>
 
     <!-- About -->
-    <section id="bio" class="bio">
+    <section id="bio" class="bio bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -101,7 +101,7 @@
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="insta" class="insta bg-primary">
+    <section id="insta" class="insta">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -118,7 +118,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -155,13 +155,13 @@
     
     var feed = new Instafeed({
         get: 'user',
-        userId : '28901711',
-        accessToken: '28901711.1677ed0.c407824ed4a3436abd7dd3d7d8d8cef6',
+        userId : '2297173175',
+        accessToken: '2297173175.1677ed0.15857aff0d824568b227f2361e77579b',
         resolution: 'standard_resolution',
         template: '<div class="col-md-4"><a target="_blank" href="{{link}}"><img src="{{image}}" /></a></div>',
         sortBy: "most-recent",
         filter: function(image) {
-            return !($.inArray("yoga", image.tags) == -1);   
+            return image.tags.indexOf("yoga") != -1;   
         }
     });
     
