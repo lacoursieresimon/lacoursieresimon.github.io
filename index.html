@@ -87,8 +87,8 @@
             </div>
             <div class="row github">
                 <div class="activity"></div>
-                    <h3>Repositories</h3>
-                <div class="repos"></div>
+                    <!--<h3>Repositories</h3>
+                <div class="repos"></div>-->
             </div>
         </div>
     </section>
@@ -203,8 +203,8 @@
         vidW = vidW > 500 ? 500 : (vidW < 280 ? 280 : vidW);
         var videoSize = { width:vidW, height:vidW/(16/9)  };
         
-        _.each(repos, function(repo){ $('.repos').append('<div class="' + repo.r + '"></div>'); });
-        _.each(repos, function(repo){ Github.repoActivity({ username:repo.u, reponame:repo.r, selector:'.github .' + repo.r, OAuth: gtoken }); });
+        //_.each(repos, function(repo){ $('.repos').append('<div class="' + repo.r + '"></div>'); });
+        //_.each(repos, function(repo){ Github.repoActivity({ username:repo.u, reponame:repo.r, selector:'.github .' + repo.r, OAuth: gtoken }); });
         _.each(videos, function(id){ $('.videos').append('<iframe width="' + videoSize.width +  '" height="' + videoSize.height + '" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen onresize="adjustVideos()"></iframe>'); });
         
     </script>
