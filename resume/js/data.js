@@ -16,8 +16,8 @@ function l(key) {
 
 var dict = {
 	address: {
-		'en': 'actual address',
-		'fr': 'adresse actuelle'
+		'en': 'address',
+		'fr': 'adresse'
 	},
 	quebec: {
 		'en': 'Quebec',
@@ -91,9 +91,29 @@ var dict = {
 		'en': 'Software developer',
 		'fr': 'Développeur logiciel'
 	},
+    shotgunDate: {
+		'en': 'January 2016 to April 2016',
+		'fr': 'Janvier 2016 à avril 2016'
+	},
+	shotgunContent: {
+		'en': [
+			'- Developed Shotgun, a Film And Game Production Planning Web App',
+			'- Added UI features to support film Cuts in the online video player',
+			'- Developed features for a Ruby on Rails web server',
+			'- Fixed many customer reported bugs',
+			'- Used GitHub as a version control and branching system'
+		],
+		fr: [
+			'- Développer Shotgun, un logiciel web de planification de production multimédia',
+			'- Développer des fonctionnalités pour un serveur Ruby on Rails',
+			'- Développer l\'interface pour supporter les coupures dans le lecteur vidéo',
+			'- Régler une multitude de problèmes trouvés par les clients',
+			'- Utiliser le contrôle de version et le système de branches GitHub',
+		]
+	},
 	coveoDate: {
-		'en': 'May 2015 to present',
-		'fr': 'Mai 2015 à aujourd’hui'
+		'en': 'May 2015 to October 2015',
+		'fr': 'Mai 2015 à octobre 2015'
 	},
 	coveoContent: {
 		'en': [
@@ -101,15 +121,13 @@ var dict = {
 			'- Developed dynamic user interfaces with Backbone.js and Marionette.js in Typescript',
 			'- Created a mobile UI project during a hackathon and made it ' + a('https://github.com/Coveo/JsAdminMobile', 'open source at Coveo' + icn('social-github')),
 			'- Configured cloud instances on Amazon Web Services',
-			'- Used Mercurial as a version control and branching system',
 			'- Reviewed my peers’ code and had mine reviewed by them as well'
 		],
 		fr: [
-			'- Développer un service infonuagique Java permettant la gestion du moteur de recherche',
+			'- Développer un service infonuagique Java pour gerer le moteur de recherche',
 			'- Développer des interfaces web en TypeScript avec Backbone.js et Marionette.js',
 			'- Créer ' + a('https://github.com/Coveo/JsAdminMobile', 'un projet « open source »' + icn('social-github')) + ' d’interface mobile lors d’un hackathon de Coveo',
 			'- Configurer des instances infonuagiques sur Amazon Web Services',
-			'- Utiliser le contrôle de version et le système de branches de Mercurial',
 			'- Réviser le code de mes collègues et obtenir leurs avis sur le mien'
 		]
 	},
@@ -119,17 +137,13 @@ var dict = {
 	},
 	seikaContent: {
 		'en': [
-			'- Developed algorithms used in custom made software solutions',
 			'- Programmed a custom employee managing website using ASP.Net MVC',
-			'- Peer reviewed code and algorithms using Microsoft Team Foundation Server',
 			'- Optimized the performance of a custom object-relational mapping system',
 			'- Conceived automated unit tests to ensure algorithmic efficiency over time',
 			'- Optimized, standardized and improved existing code'
 		],
 		'fr': [
-			'- Développer du code et des algorithmes utilisés dans des logiciels sur mesure',
 			'- Programmer, concevoir et adapter un site web de gestion d’employés en ASP.Net MVC ',
-			'- Réviser du code et des algorithmes entre pairs à l’aide de MS Team Foundation Server',
 			'- Améliorer la performance d’un système de mapping objet-relationnel sur mesure',
 			'- Concevoir des tests unitaires automatisés assurant l’efficience des algorithmes',
 			'- Optimiser, standardiser et améliorer du code existant'
@@ -171,8 +185,37 @@ var dict = {
 		'en': 'Merit "Perseverance in learning"',
 		'fr': 'Méritas « Persévérance dans les apprentissages »'
 	},
+	cogniboxHackathon: {
+		'en': '1<span class="sup">st</span> prize at Cognibox\'s Hackathon 2016',
+		'fr': '1<span class="sup">er</span> prix au Hackathon Cognibox 2016'
+	},
+	cogniboxHackathonContent: {
+		'en': [
+			'Developped a mobile app that helps its users save money at the grocery store',
+			a('http://www.lapresse.ca/le-nouvelliste/actualites/201601/31/01-4945812-defi-hackathon-trente-six-heures-pour-pondre-un-logiciel.php', 
+            'More info in this local\'s newspaper article on lapresse.ca')
+           
+		],
+		'fr': [
+			'Développement d\'une application mobile permettant de sauver de l\'argent sur l\'épicerie',
+			a('http://www.lapresse.ca/le-nouvelliste/actualites/201601/31/01-4945812-defi-hackathon-trente-six-heures-pour-pondre-un-logiciel.php', 
+            'Plus d\'information dans cet article de journal local sur lapresse.ca')
+		]
+	},
+	coveoBlitz: {
+		'en': 'Participated at Coveo Blitz 2016',
+		'fr': 'Participation au Coveo Blitz 2016'
+	},
+	coveoBlitzContent: {
+		'en': [
+			'Developped an AI for a game that would compete against other players'
+		],
+		'fr': [
+			'Développement d\'un IA pour un jeu qui était mis au défi contre celui des autres joueurs'
+		]
+	},
 	coveoHackathon: {
-		'en': 'Participated at a Coveo hackathon',
+		'en': 'Participated in a Coveo hackathon',
 		'fr': 'Participation à un hackathon Coveo'
 	},
 	coveoHackathonContent: {
@@ -186,7 +229,7 @@ var dict = {
 		]
 	},
 	hackSherbrooke: {
-		'en': 'Participated at the HackSherbrooke hackathon',
+		'en': 'Participated in the HackSherbrooke hackathon',
 		'fr': 'Participation au hackathon HackSherbrooke'
 	},
 	hackSherbrookeContent: {
@@ -250,12 +293,11 @@ function calcData(){
 	lang = $(".lang-dropdown select").val();
 	
 	sideNodes = [
-		{ title: l('address'), content: '1419, de l’Université<br>Sherbrooke (' + l('quebec') + ')<br>J1K 2P6' },
-		{ title: l('permanentAddress'), content: '17, Poirier, Victoriaville<br>(' + l('quebec') + ') G6S 0J1' },
+		{ title: l('address'), content: '17, Poirier, Victoriaville<br>(' + l('quebec') + ') G6S 0J1' },
 		{ title: 'mobile', content: '(819) 350-8903' },
 		{ title: l('links'), content: l('linksValues') },
 		{ title: l('languages'), content: l('languageValues') },
-		{ title: l('programming'), content: 'JavaScript, HTML/CSS<br>C#, C++, VB.NET<br>Java' },
+		{ title: l('programming'), content: 'JavaScript, HTML/CSS<br>Java, C++<br>Ruby, C#' },
 		{ title: l('database'), content: 'MySQL, MongoDB <br>SQL Server, Oracle<br>PostgreSQL' },
 		/*{ title: l('librairies'), content: 'Ionic Framework<br>Underscore.js<br>Marionette.js<br>Backbone.js<br>Angular.js<br>Less.js' },*/
 		{ title: l('softwares'), content: 'SourceTree, TortoiseHg<br>Eclipse, Visual Studio<br>VS Code, WebStorm<br>Adobe CS, Pro Tools' }
@@ -265,15 +307,20 @@ function calcData(){
 		{
 			title: 'interests',
 			displayedTitle: l('aboutMe'),
-			color: '#6CE0F1',
+			color: '#c0392b',
 			content: l('aboutMeValues'),
 			list: []
 		},
 		{
 			title: 'experience',
 			displayedTitle: l('experience'),
-			color: '#FB4485',
+			color: '#2980b9',
 			list: [
+				{
+					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ Autodesk, Montreal',
+					date: l('shotgunDate'),
+					content: l('shotgunContent')
+				},
 				{
 					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ Coveo Solutions Inc., Quebec',
 					date: l('coveoDate'),
@@ -289,7 +336,7 @@ function calcData(){
 		{
 			title: 'education',
 			displayedTitle: l('education'),
-			color: '#FDA333',
+			color: '#27ae60',
 			list: [
 				{
 					title: '<span class="bold">' + l('uniFormation') + '</span>',
@@ -306,7 +353,7 @@ function calcData(){
 		{
 			title: 'distinctions',
 			displayedTitle: 'distinctions',
-			color: '#C2E15F',
+			color: '#16a085',
 			list: [
 				{
 					title: '<span class="bold">' + l('admissionGrant') + '</span>',
@@ -338,8 +385,18 @@ function calcData(){
 		{
 			title: 'accomplishments',
 			displayedTitle: l('accomplishments'),
-			color: '#D3A4F9',
+			color: '#f39c12',
 			list: [
+				{
+					title: '<span class="bold">' + l('cogniboxHackathon') + '</span>',
+					date: '2016',
+					content: l('cogniboxHackathonContent')
+				},
+				{
+					title: '<span class="bold">' + l('coveoBlitz') + '</span>',
+					date: '2016',
+					content: l('coveoBlitzContent')
+				},
 				{
 					title: '<span class="bold">' + l('coveoHackathon') + '</span>',
 					date: '2015',
@@ -354,12 +411,12 @@ function calcData(){
 					title: '<span class="bold">' + l('hackSh') + '</span>',
 					date: '2015',
 					content: l('hackShContent')
-				},
+				},/*
 				{
 					title: '<span class="bold">' + l('audioVideoProjects') + '</span>',
 					date: l('audioVideoProjectsDate'),
 					content: l('audioVideoProjectsContent')
-				},
+				},*/
 				{
 					title: '<span class="bold">' + l('oktav') + '</span>',
 					date: '2014',
