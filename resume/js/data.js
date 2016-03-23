@@ -3,7 +3,7 @@ var sideNodes;
 var mainNodes;
 
 function a(href, title) {
-	return '<a href="' + href + '">' + title + '</a>';
+	return '<a target="_blank" href="' + href + '">' + title + '</a>';
 }
 
 function icn(src){
@@ -374,12 +374,12 @@ function calcData(){
 					title: '<span class="bold">' + l('mcgillGrant') + '</span>',
 					date: '2011',
 					content: ['Collège Clarétain']
-				},
+				},/*
 				{
 					title: '<span class="bold">' + l('claretainMerit') + '</span>',
 					date: '2011',
 					content: ['Collège Clarétain']
-				},
+				},*/
 			]
 		},
 		{

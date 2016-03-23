@@ -57,6 +57,7 @@
  	font-size: 1.6rem;
  	line-height: 30px;
  	text-overflow: ellipsis;
+    color:#2c3e50;
  }
  .gt-header .user-login{
  	display: block;
