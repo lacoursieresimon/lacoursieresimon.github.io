@@ -80,10 +80,9 @@
     <section id="resume">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center video-container">
+                <div class="col-lg-12 text-center resume-container">
                     <h2>Check out my resume!</h2>
                     <hr class="star-primary">
-                    <iframe class="resume-frame" src="https://lacoursieresimon.github.io/resume"></iframe>
                 </div>
             </div>
         </div>
@@ -196,6 +195,12 @@
                 selector: '.github .activity'
         });
         
+        
+        if (window.innerWidth < 745){
+            $(".resume-container").append('<a target="_blank" href="https://lacoursieresimon.github.io/resume"><img src="resume/screenshot.png"></a>');
+        } else {
+            $(".resume-container").append('<iframe class="resume-frame" src="https://lacoursieresimon.github.io/resume"></iframe>');
+        }
         var vidW = $(window).width() > 700 ? $(window).width() / 3 : $(window).width() / 1.6;
         vidW = vidW > 500 ? 500 : (vidW < 280 ? 280 : vidW);
         var videoSize = { width:vidW, height:vidW/(16/9)  };
