@@ -3,7 +3,7 @@ Portfolio of my projects
 
 Available [here](http://simonlacoursiere.me)
 
-![Screenshots](https://raw.githubusercontent.com/lacoursieresimon/lacoursieresimon.github.io/master/portfolio/img/screenshot.jpg)
+![Screenshots](https://raw.githubusercontent.com/lacoursieresimon/lacoursieresimon.github.io/master/portfolio/img/screenshot.png)
 
 #
 #
