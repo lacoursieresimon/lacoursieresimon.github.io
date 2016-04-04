@@ -211,7 +211,7 @@ var dict = {
 			'Developped an AI for a game that would compete against other players'
 		],
 		'fr': [
-			'Développement d\'un IA pour un jeu qui était mis au défi contre celui des autres joueurs'
+			'Développement d\'une IA pour un jeu qui était mise au défi contre celle des autres joueurs'
 		]
 	},
 	coveoHackathon: {
@@ -234,12 +234,10 @@ var dict = {
 	},
 	hackSherbrookeContent: {
 		'en': [
-			'Made an informative mobile app about Sherbrooke\'s events, services and businesses',
-			a('http://github.com/goHub-HackSherbrooke/goHub', 'More info on the project\'s GitHub page' + icn('social-github'))
+			'Made an informative mobile app about Sherbrooke\'s events, services and businesses'
 		],
 		'fr': [
-			'Création d\'une application mobile à propos des évènements et des services de Sherbrooke',
-			a('http://github.com/goHub-HackSherbrooke/goHub', 'Plus de détails sur la page du projet GitHub' + icn('social-github'))
+			'Création d\'une application mobile à propos des évènements et des services de Sherbrooke'
 		]
 	},
 	hackSh: {
