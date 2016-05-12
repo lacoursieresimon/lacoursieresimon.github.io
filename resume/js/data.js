@@ -33,7 +33,7 @@ var dict = {
 	},
 	languages: {
 		'en': 'languages',
-		'fr': 'langages'
+		'fr': 'langues'
 	},
 	programming: {
 		'en': 'programming',
@@ -298,7 +298,7 @@ function calcData(){
 		{ title: l('programming'), content: 'JavaScript, HTML/CSS<br>Java, C++<br>Ruby, C#' },
 		{ title: l('database'), content: 'MySQL, MongoDB <br>SQL Server, Oracle<br>PostgreSQL' },
 		/*{ title: l('librairies'), content: 'Ionic Framework<br>Underscore.js<br>Marionette.js<br>Backbone.js<br>Angular.js<br>Less.js' },*/
-		{ title: l('softwares'), content: 'SourceTree, TortoiseHg<br>Eclipse, Visual Studio<br>VS Code, WebStorm<br>Adobe CS, Pro Tools' }
+		{ title: l('softwares'), content: 'SourceTree, TortoiseHg<br>Eclipse, Visual Studio<br>Adobe CS, Pro Tools<br>VS Code, IntelliJ' }
 	];
 	
 	mainNodes = [
