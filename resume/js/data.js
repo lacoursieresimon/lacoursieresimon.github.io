@@ -104,7 +104,7 @@ var dict = {
 			'- Used GitHub as a version control and branching system'
 		],
 		fr: [
-			'- Développer Shotgun, un logiciel web de planification de production multimédia',
+			'- Développer Shotgun, un logiciel web de planification de projets multimédia',
 			'- Développer des fonctionnalités pour un serveur Ruby on Rails',
 			'- Développer l\'interface pour supporter les coupures dans le lecteur vidéo',
 			'- Régler une multitude de problèmes trouvés par les clients',
@@ -124,7 +124,7 @@ var dict = {
 			'- Reviewed my peers’ code and had mine reviewed by them as well'
 		],
 		fr: [
-			'- Développer un service infonuagique Java pour gerer le moteur de recherche',
+			'- Développer un service infonuagique Java pour gérer le moteur de recherche',
 			'- Développer des interfaces web en TypeScript avec Backbone.js et Marionette.js',
 			'- Créer ' + a('https://github.com/Coveo/JsAdminMobile', 'un projet « open source »' + icn('social-github')) + ' d’interface mobile lors d’un hackathon de Coveo',
 			'- Configurer des instances infonuagiques sur Amazon Web Services',
@@ -191,7 +191,7 @@ var dict = {
 	},
 	cogniboxHackathonContent: {
 		'en': [
-			'Developped a mobile app that helps its users save money at the grocery store',
+			'Developped a mobile app that helps its users to save money at the grocery store',
 			a('http://www.lapresse.ca/le-nouvelliste/actualites/201601/31/01-4945812-defi-hackathon-trente-six-heures-pour-pondre-un-logiciel.php', 
             'More info in this local\'s newspaper article on lapresse.ca')
            
@@ -291,14 +291,15 @@ function calcData(){
 	lang = $(".lang-dropdown select").val();
 	
 	sideNodes = [
-		{ title: l('address'), content: '17, Poirier, Victoriaville<br>(' + l('quebec') + ') G6S 0J1' },
+		{ title: l('address'), content: '2145, Galt, Sherbrooke<br>(' + l('quebec') + ') J1K 3A8' },
+		{ title: l('permanentAddress'), content: '17, Poirier, Victoriaville<br>(' + l('quebec') + ') G6S 0J1' },
 		{ title: 'mobile', content: '(819) 350-8903' },
 		{ title: l('links'), content: l('linksValues') },
 		{ title: l('languages'), content: l('languageValues') },
-		{ title: l('programming'), content: 'JavaScript, HTML/CSS<br>Java, C++<br>Ruby, C#' },
+		{ title: l('programming'), content: 'JavaScript, Java, C++<br>HTML/CSS, Ruby, C#<br>' },
 		{ title: l('database'), content: 'MySQL, MongoDB <br>SQL Server, Oracle<br>PostgreSQL' },
 		/*{ title: l('librairies'), content: 'Ionic Framework<br>Underscore.js<br>Marionette.js<br>Backbone.js<br>Angular.js<br>Less.js' },*/
-		{ title: l('softwares'), content: 'SourceTree, TortoiseHg<br>Eclipse, Visual Studio<br>Adobe CS, Pro Tools<br>VS Code, IntelliJ' }
+		{ title: l('softwares'), content: 'IntelliJ, VS Code<br>Adobe CS, Pro Tools<br>Visual Studio, Eclipse<br>SourceTree, TortoiseHg' }
 	];
 	
 	mainNodes = [

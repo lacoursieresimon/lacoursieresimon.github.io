@@ -28,12 +28,12 @@ div.header a {
 }
 
 div.header .title {
-	font-size: 72px;
+	font-size: 64px;
 	display: block;
 }
 
 div.header .subtitle {
-	font-size: 22px;
+	font-size: 20px;
 }
 
 div.header .title .bold {
