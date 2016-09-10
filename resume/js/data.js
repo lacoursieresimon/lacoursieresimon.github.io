@@ -56,8 +56,8 @@ var dict = {
 		'fr': 'français (natif)<br>anglais (fluent)'
 	},
 	linksValues: {
-		'en':  a('http://simonlacoursiere.me/', 'simonlacoursiere.me' + icn('briefcase')) + a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + a('mailto:simon.lacoursiere@usherbrooke.ca', 'email' + icn('email')),
-		'fr': a('http://simonlacoursiere.me/', 'simonlacoursiere.me' + icn('briefcase')) + a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + a('mailto:simon.lacoursiere@usherbrooke.ca', 'courriel' + icn('email'))
+		'en':  a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + a('mailto:simon.lacoursiere@usherbrooke.ca', 'email' + icn('email')),
+		'fr': a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + a('mailto:simon.lacoursiere@usherbrooke.ca', 'courriel' + icn('email'))
 	},
 	aboutMe: {
 		'en': 'about me',
@@ -132,8 +132,8 @@ var dict = {
 		]
 	},
 	seikaDate: {
-		'en': 'January 2014 to July 2014',
-		'fr': 'Janvier 2014 à juillet 2014 '
+		'en': 'January 2014 to August 2014',
+		'fr': 'Janvier 2014 à août 2014 '
 	},
 	seikaContent: {
 		'en': [
@@ -155,7 +155,7 @@ var dict = {
 	},
 	uniDate: {
 		'en': 'August 2014 to present',
-		'fr': 'Aout 2014 à aujourd’hui'
+		'fr': 'Août 2014 à aujourd’hui'
 	},
 	cegFormation: {
 		'en': 'Computer Science Technology',
@@ -163,7 +163,7 @@ var dict = {
 	},
 	cegDate: {
 		'en': 'August 2011 to May 2014',
-		'fr': 'Aout 2011 à mai 2014'
+		'fr': 'Août 2011 à mai 2014'
 	},
 	admissionGrant: {
 		'en': 'Admission grant',
