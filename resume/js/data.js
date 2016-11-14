@@ -56,8 +56,16 @@ var dict = {
 		'fr': 'français (natif)<br>anglais (fluent)'
 	},
 	linksValues: {
-		'en':  a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + a('mailto:simon.lacoursiere@usherbrooke.ca', 'email' + icn('email')),
-		'fr': a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + a('mailto:simon.lacoursiere@usherbrooke.ca', 'courriel' + icn('email'))
+		'en':  a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + 
+				a('https://www.youtube.com/c/minimalistik', 'youtube' + icn('social-youtube')) + 
+				a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + 
+				a('https://github.com/lacoursieresimon',  'github' + icn('social-github')) + 
+				a('mailto:simon.lacoursiere@usherbrooke.ca', 'email' + icn('email')),
+		'fr': a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + 
+				a('https://www.youtube.com/c/minimalistik', 'youtube' + icn('social-youtube')) + 
+				a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + 
+				a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + 
+				a('mailto:simon.lacoursiere@usherbrooke.ca', 'courriel' + icn('email'))
 	},
 	aboutMe: {
 		'en': 'about me',
@@ -91,8 +99,26 @@ var dict = {
 		'en': 'Software developer',
 		'fr': 'Développeur logiciel'
 	},
+    gsoftDate: {
+		'en': 'Sept. 2016 to Dec. 2016',
+		'fr': 'Sept. 2016 à déc. 2016'
+	},
+	gsoftContent: {
+		'en': [
+			'- Developed Officevibe, an Employee Engagement Mesuring Tool',
+			'- Added UI features using Knockout to support automatic groups',
+			'- Developed back end features using C# and MongoDB',
+			'- Fixed bugs across the application'
+		],
+		fr: [
+			'- Développer Officevibe, un outil de mesure de l\'engagement des employés',
+			'- Développer des fonctionnalités serveur en C# et avec MongoDB',
+			'- Développer l\'interface pour supporter la notion de groupes automatiques',
+			'- Régler des problèmes d\'utilisation de l\'application',
+		]
+	},
     shotgunDate: {
-		'en': 'January 2016 to April 2016',
+		'en': 'Jan. 2016 to April 2016',
 		'fr': 'Janvier 2016 à avril 2016'
 	},
 	shotgunContent: {
@@ -100,19 +126,17 @@ var dict = {
 			'- Developed Shotgun, a Film And Game Production Planning Web App',
 			'- Added UI features to support film Cuts in the online video player',
 			'- Developed features for a Ruby on Rails web server',
-			'- Fixed many customer reported bugs',
-			'- Used GitHub as a version control and branching system'
+			'- Fixed many customer reported bugs'
 		],
 		fr: [
 			'- Développer Shotgun, un logiciel web de planification de projets multimédia',
 			'- Développer des fonctionnalités pour un serveur Ruby on Rails',
 			'- Développer l\'interface pour supporter les coupures dans le lecteur vidéo',
-			'- Régler une multitude de problèmes trouvés par les clients',
-			'- Utiliser le contrôle de version et le système de branches GitHub',
+			'- Régler une multitude de problèmes trouvés par les clients'
 		]
 	},
 	coveoDate: {
-		'en': 'May 2015 to October 2015',
+		'en': 'May 2015 to Oct. 2015',
 		'fr': 'Mai 2015 à octobre 2015'
 	},
 	coveoContent: {
@@ -120,15 +144,13 @@ var dict = {
 			'- Developed a Java cloud platform used to configure the Coveo search engine',
 			'- Developed dynamic user interfaces with Backbone.js and Marionette.js in Typescript',
 			'- Created a mobile UI project during a hackathon and made it ' + a('https://github.com/Coveo/JsAdminMobile', 'open source at Coveo' + icn('social-github')),
-			'- Configured cloud instances on Amazon Web Services',
-			'- Reviewed my peers’ code and had mine reviewed by them as well'
+			'- Configured cloud instances on Amazon Web Services'
 		],
 		fr: [
 			'- Développer un service infonuagique Java pour gérer le moteur de recherche',
 			'- Développer des interfaces web en TypeScript avec Backbone.js et Marionette.js',
 			'- Créer ' + a('https://github.com/Coveo/JsAdminMobile', 'un projet « open source »' + icn('social-github')) + ' d’interface mobile lors d’un hackathon de Coveo',
-			'- Configurer des instances infonuagiques sur Amazon Web Services',
-			'- Réviser le code de mes collègues et obtenir leurs avis sur le mien'
+			'- Configurer des instances infonuagiques sur Amazon Web Services'
 		]
 	},
 	seikaDate: {
@@ -165,6 +187,10 @@ var dict = {
 		'en': 'August 2011 to May 2014',
 		'fr': 'Août 2011 à mai 2014'
 	},
+	wbGrant: {
+		'en': 'WB Games excellence grant',
+		'fr': 'Bourse d\'excellence WB Games'
+	},
 	admissionGrant: {
 		'en': 'Admission grant',
 		'fr': 'Bourse d\'admission'
@@ -179,7 +205,7 @@ var dict = {
 	},
 	mcgillGrant: {
 		'en': 'McGill University grant, scientific personality',
-		'fr': 'Bourse de l’Université McGill, personnalité scientifique'
+		'fr': 'Bourse de l’Université McGill'
 	},
 	claretainMerit: {
 		'en': 'Merit "Perseverance in learning"',
@@ -229,7 +255,7 @@ var dict = {
 		]
 	},
 	hackSherbrooke: {
-		'en': 'Participated in the HackSherbrooke hackathon',
+		'en': 'Participated at the HackSherbrooke hackathon',
 		'fr': 'Participation au hackathon HackSherbrooke'
 	},
 	hackSherbrookeContent: {
@@ -291,15 +317,14 @@ function calcData(){
 	lang = $(".lang-dropdown select").val();
 	
 	sideNodes = [
-		{ title: l('address'), content: '2145, Galt, Sherbrooke<br>(' + l('quebec') + ') J1K 3A8' },
+		{ title: l('address'), content: '1644, Amherst, Montreal<br>(' + l('quebec') + ') H2L 3L5' },
 		{ title: l('permanentAddress'), content: '17, Poirier, Victoriaville<br>(' + l('quebec') + ') G6S 0J1' },
 		{ title: 'mobile', content: '(819) 350-8903' },
 		{ title: l('links'), content: l('linksValues') },
 		{ title: l('languages'), content: l('languageValues') },
-		{ title: l('programming'), content: 'JavaScript, Java, C++<br>HTML/CSS, Ruby, C#<br>' },
+		{ title: l('programming'), content: 'JavaScript, Java, C#<br>HTML/CSS, Python<br>C++, Ruby' },
 		{ title: l('database'), content: 'MySQL, MongoDB <br>SQL Server, Oracle<br>PostgreSQL' },
 		/*{ title: l('librairies'), content: 'Ionic Framework<br>Underscore.js<br>Marionette.js<br>Backbone.js<br>Angular.js<br>Less.js' },*/
-		{ title: l('softwares'), content: 'IntelliJ, VS Code<br>Adobe CS, Pro Tools<br>Visual Studio, Eclipse<br>SourceTree, TortoiseHg' }
 	];
 	
 	mainNodes = [
@@ -316,6 +341,11 @@ function calcData(){
 			color: '#2980b9',
 			list: [
 				{
+					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ GSOFT, Montreal',
+					date: l('gsoftDate'),
+					content: l('gsoftContent')
+				},
+				{
 					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ Autodesk, Montreal',
 					date: l('shotgunDate'),
 					content: l('shotgunContent')
@@ -324,12 +354,12 @@ function calcData(){
 					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ Coveo Solutions Inc., Quebec',
 					date: l('coveoDate'),
 					content: l('coveoContent')
-				},
+				}/*,
 				{
 					title: '<span class="bold">' + l('programmerAnalyst') + '</span> @ SEIKA Logiciel, Plessisville',
 					date: l('seikaDate'),
 					content: l('seikaContent')
-				}
+				}*/
 			]
 		},
 		{
@@ -354,6 +384,11 @@ function calcData(){
 			displayedTitle: 'distinctions',
 			color: '#16a085',
 			list: [
+				{
+					title: '<span class="bold">' + l('wbGrant') + '</span>',
+					date: '2016',
+					content: ['Université de Sherbrooke']
+				},
 				{
 					title: '<span class="bold">' + l('admissionGrant') + '</span>',
 					date: '2014',
