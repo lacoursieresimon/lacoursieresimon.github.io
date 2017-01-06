@@ -1,0 +1,5 @@
+
+blog/Gemfile*
+blog/*.md
+blog/*.gemspec
+blog/*.log
