@@ -90145,10 +90145,6 @@ page-report .has-refresher > .scroll-content {
   border-top: none;
 }
 
-.ios page-report.ion-page.show-page .content.content-ios {
-  margin-top: 0px;
-}
-
 page-today ion-list .selectedDays {
   margin: 0;
   height: 100px;
