@@ -120,6 +120,7 @@ a {
 }
 
 .content div .list .item .header span.title{
+	vertical-align: top;
 	display: inline-block;
 	font-weight: 300;
 	font-size: 15px;
@@ -131,11 +132,13 @@ a {
 }
 
 .content div .list .item .header span.date{
+	position: absolute;
+	right: 30px;
+	width:170px;
 	display: inline-block;
 	font-weight: 300;
 	font-size: 12px;
 	text-align: right;
-	width: 30%;
 }
 
 .list .item{
