@@ -100,20 +100,20 @@ var dict = {
 		'fr': 'Développeur logiciel'
 	},
     gsoftDate: {
-		'en': 'Sept. 2016 to Dec. 2016',
-		'fr': 'Sept. 2016 à déc. 2016'
+		'en': 'Sept. 2016 to Dec. 2016 <br/> May 2017 to Aug. 2017',
+		'fr': 'Sept. 2016 à déc. 2016 <br/> mai 2017 à aout 2017'
 	},
 	gsoftContent: {
 		'en': [
 			'- Developed Officevibe, an Employee Engagement Mesuring Tool',
-			'- Added UI features using Knockout to support automatic groups',
+			'- Added new UI features using React',
 			'- Developed back end features using C# and MongoDB',
 			'- Fixed bugs across the application'
 		],
 		fr: [
-			'- Développer Officevibe, un outil de mesure de l\'engagement des employés',
+			'- Développer Officevibe, un outil de mesure de l\'engagement',
 			'- Développer des fonctionnalités serveur en C# et avec MongoDB',
-			'- Développer l\'interface pour supporter la notion de groupes automatiques',
+			'- Développer l\'interface de nouvelles fonctionnalités avec React',
 			'- Régler des problèmes d\'utilisation de l\'application',
 		]
 	},
@@ -210,6 +210,23 @@ var dict = {
 	claretainMerit: {
 		'en': 'Merit "Perseverance in learning"',
 		'fr': 'Méritas « Persévérance dans les apprentissages »'
+	},
+	cogniboxHackathon2017: {
+		'en': '2<span class="sup">nd</span> prize at Cognibox\'s Hackathon 2017',
+		'fr': '2<span class="sup">e</span> prix au Hackathon Cognibox 2017'
+	},
+	cogniboxHackathon2017Content: {
+		'en': [
+			'Developped a mobile app that helps planning a vacation in Shawinigan',
+			a('http://ici.radio-canada.ca/nouvelle/1013798/hackathon-shawinigan-application-programmeurs', 
+            'More info in this newspaper article on radio-canada.ca')
+           
+		],
+		'fr': [
+			'Développement d\'une application mobile planifiant un séjour à Shawinigan',
+			a('http://ici.radio-canada.ca/nouvelle/1013798/hackathon-shawinigan-application-programmeurs', 
+            'Plus d\'information dans cet article radio-canada.ca')
+		]
 	},
 	cogniboxHackathon: {
 		'en': '1<span class="sup">st</span> prize at Cognibox\'s Hackathon 2016',
@@ -317,13 +334,13 @@ function calcData(){
 	lang = $(".lang-dropdown select").val();
 	
 	sideNodes = [
-		{ title: l('address'), content: '1644, Amherst, Montreal<br>(' + l('quebec') + ') H2L 3L5' },
+		{ title: l('address'), content: '6565, Dumas, Montreal<br>(' + l('quebec') + ') H4E 3A1' },
 		{ title: l('permanentAddress'), content: '17, Poirier, Victoriaville<br>(' + l('quebec') + ') G6S 0J1' },
 		{ title: 'mobile', content: '(819) 350-8903' },
 		{ title: l('links'), content: l('linksValues') },
 		{ title: l('languages'), content: l('languageValues') },
-		{ title: l('programming'), content: 'JavaScript, Java, C#<br>HTML/CSS, Python<br>C++, Ruby' },
-		{ title: l('database'), content: 'MySQL, MongoDB <br>SQL Server, Oracle<br>PostgreSQL' },
+		{ title: l('programming'), content: 'JavaScript, C#, Java<br>HTML/CSS, Python<br>C++, Ruby' },
+		{ title: l('database'), content: 'MongoDB, MySQL<br>SQL Server, Oracle<br>PostgreSQL' },
 		/*{ title: l('librairies'), content: 'Ionic Framework<br>Underscore.js<br>Marionette.js<br>Backbone.js<br>Angular.js<br>Less.js' },*/
 	];
 	
@@ -422,6 +439,11 @@ function calcData(){
 			color: '#f39c12',
 			list: [
 				{
+					title: '<span class="bold">' + l('cogniboxHackathon2017') + '</span>',
+					date: '2017',
+					content: l('cogniboxHackathon2017Content')
+				},
+				{
 					title: '<span class="bold">' + l('cogniboxHackathon') + '</span>',
 					date: '2016',
 					content: l('cogniboxHackathonContent')
@@ -450,12 +472,12 @@ function calcData(){
 					title: '<span class="bold">' + l('audioVideoProjects') + '</span>',
 					date: l('audioVideoProjectsDate'),
 					content: l('audioVideoProjectsContent')
-				},*/
+				},
 				{
 					title: '<span class="bold">' + l('oktav') + '</span>',
 					date: '2014',
 					content: l('oktavContent')
-				}
+				}*/
 			]
 		}
 	];
