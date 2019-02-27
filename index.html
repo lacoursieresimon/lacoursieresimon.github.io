@@ -64,11 +64,11 @@
                     <div class="intro-text">
                         <hr class="star-light">
                         <span class="skills">Simon Lacoursière</span>
-                        <span class="school">@ Université de Sherbrooke</span>
+                        <span class="school">@ Montreal, QC, Canada</span>
                         <span class="resume">
-                            Computer science student wishing to put his knowledge to work
-                            and to acquire expertise in the different fields of 
-                            programing and software development.
+                            I love great UXs & efficient code! 
+                            <br>
+                            Full-stack software developer wishing to put his knowledge to work & to acquire expertise in the different fields of programming & software development.
                         </span>
                     </div>
                 </div>
@@ -99,8 +99,6 @@
             </div>
             <div class="row github">
                 <div class="activity"></div>
-                    <!--<h3>Repositories</h3>
-                <div class="repos"></div>-->
             </div>
         </div>
     </section>
@@ -125,7 +123,7 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>Sherbrooke, Quebec</br> Canada</p>
+                        <p>Montreal, Quebec</br> Canada</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -137,13 +135,13 @@
                                 <a href="http://www.linkedin.com/in/lacoursieresimon" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
                             <li>
-                                <a href="http://www.youtube.com/c/minimalistik " target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
+                                <a href="http://www.youtube.com/minimalistik " target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Contact me</h3>
-                        <p><a class="white" href="mailto:simon.lacoursiere@usherbrooke.ca">simon.lacoursiere@usherbrooke.ca</a></p>
+                        <p><a class="white" href="mailto:lacoursieresimon@gmail.com">lacoursieresimon@gmail.com</a></p>
                     </div>
                 </div>
             </div>
@@ -176,16 +174,7 @@
     <script>
         $('.date').append('Copyright &copy; Simon Lacoursiere ' + new Date().getFullYear());
         
-        /*
-        var repos = [ 
-            { u: 'WaverBin', r:'proximity-frontend'}, 
-            { u: 'WaverBin', r:'proximity-backend'}, 
-            { u: 'Coveo', r:'JsAdminMobile'},
-            { u: 'lacoursieresimon', r:'goHub'}
-        ];
-        */
-        
-        var videos = ['a7LEUSoHTE8', 'EbnRgkCS73w', '0TV8NKqi_hA', 'gKzMyrT6TIQ'];
+        var videos = ['5jXHCniOaPo', 'P6rl171fFT8', '_TDCepN75CA', 'EuXyYmrgK7w'];
         var gtoken = '292fb6104700b3f266d72' + '136c22393bdba139428';
         
         Github.userActivity({
@@ -204,8 +193,6 @@
         vidW = vidW > 500 ? 500 : (vidW < 280 ? 280 : vidW);
         var videoSize = { width:vidW, height:vidW/(16/9)  };
         
-        //_.each(repos, function(repo){ $('.repos').append('<div class="' + repo.r + '"></div>'); });
-        //_.each(repos, function(repo){ Github.repoActivity({ username:repo.u, reponame:repo.r, selector:'.github .' + repo.r, OAuth: gtoken }); });
         _.each(videos, function(id){ $('.videos').append('<iframe width="' + videoSize.width +  '" height="' + videoSize.height + '" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen onresize="adjustVideos()"></iframe>'); });
         
     </script>

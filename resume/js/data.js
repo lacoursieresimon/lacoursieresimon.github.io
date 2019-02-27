@@ -16,8 +16,8 @@ function l(key) {
 
 var dict = {
 	address: {
-		'en': 'address',
-		'fr': 'adresse'
+		'en': 'location',
+		'fr': 'location'
 	},
 	quebec: {
 		'en': 'Quebec',
@@ -43,8 +43,8 @@ var dict = {
 		'en': 'database',
 		'fr': 'base de données'
 	},
-	librairies: {
-		'en': 'librairies',
+	frameworks: {
+		'en': 'frameworks',
 		'fr': 'librairies'
 	},
 	softwares: {
@@ -57,23 +57,25 @@ var dict = {
 	},
 	linksValues: {
 		'en':  a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + 
-				a('https://www.youtube.com/c/minimalistik', 'youtube' + icn('social-youtube')) + 
+				a('http://minimalistik.tech', 'minimalistik.tech' + icn('camera')) + 
+				a('https://www.youtube.com/minimalistik', 'youtube' + icn('social-youtube')) + 
 				a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + 
 				a('https://github.com/lacoursieresimon',  'github' + icn('social-github')) + 
-				a('mailto:simon.lacoursiere@usherbrooke.ca', 'email' + icn('email')),
+				a('mailto:lacoursieresimon@gmail.com', 'email' + icn('email')),
 		'fr': a('http://lacoursieresimon.github.io', 'github.io' + icn('briefcase')) + 
-				a('https://www.youtube.com/c/minimalistik', 'youtube' + icn('social-youtube')) + 
+				a('http://minimalistik.tech', 'minimalistik.tech' + icn('camera')) + 
+				a('https://www.youtube.com/minimalistik', 'youtube' + icn('social-youtube')) + 
 				a('https://www.linkedin.com/in/lacoursieresimon', 'linkedin' + icn('social-linkedin')) + 
 				a('https://github.com/lacoursieresimon', 'github' + icn('social-github')) + 
-				a('mailto:simon.lacoursiere@usherbrooke.ca', 'courriel' + icn('email'))
+				a('mailto:lacoursieresimon@gmail.com', 'courriel' + icn('email'))
 	},
 	aboutMe: {
 		'en': 'about me',
 		'fr': 'à propos'
 	},
 	aboutMeValues: {
-		'en': 'Computer science student wishing to put his knowledge to work<br>and to acquire expertise in the different fields of<br>programming and software development.',
-		'fr': 'Étudiant au baccalauréat en informatique souhaitant mettre à profit ses connaissances <br>et poursuivre ses apprentissages dans les différents domaines <br>de la programmation et du développement logiciel.'
+		'en': 'I love great UXs & efficient code!<br>Full-stack software developer wishing to put his knowledge to work & to acquire <br>expertise in the different fields of programming & software development.',
+		'fr': 'J\'adore les UX hors-pair & le code efficace !<br>Développeur « full-stack » souhaitant mettre à profit ses connaissances & apprendre <br>dans les différents domaines de la programmation & du développement logiciel.'
 	},
 	education: {
 		'en': 'education',
@@ -88,8 +90,8 @@ var dict = {
 		'fr': 'réalisations'
 	},
 	computerScienceStudent: {
-		'en': 'computer science student',
-		'fr': 'étudiant au baccalauréat en informatique'
+		'en': 'software developer',
+		'fr': 'développeur logiciel'
 	},
 	programmerAnalyst: {
 		'en': 'Programmer analyst',
@@ -99,22 +101,42 @@ var dict = {
 		'en': 'Software developer',
 		'fr': 'Développeur logiciel'
 	},
+    mantleDate: {
+		'en': 'May 2018 to now',
+		'fr': 'Mai 2018 à aujourd\'hui'
+	},
+	mantleContent: {
+		'en': [
+			`- Developed ${a('https://www.mantleblockchain.com', 'Mantle')}, a blockchain as a service platform`,
+			'- Supervised & trained new employees',
+			'- Took charge of front end development (Vue.js)',
+			'- Developed full-stack features (.NET Core + MongoDB + Blockchain)',
+			`- Built the ${a('https://www.mantleblockchain.com', 'website')} with ${a('https://designers.hubspot.com/docs/hubl/intro-to-hubl', 'Hubspot HubL')} & produced all the ${a('https://www.youtube.com/channel/UC-tikvziELaxX6lWmcVcGvA', 'video content')}`,
+		],
+		'fr': [
+			`- Développer ${a('https://www.mantleblockchain.com', 'Mantle')}, une application facilitant l\'intégration blockchain`,
+			'- Superviser l\'intégration des nouveaux employés',
+			'- Administrer le développement de l\'interface web Vue.js',
+			'- Développement de fonctionnalités « full-stack » (.NET Core + MongoDB + Blockchain)',
+			`- Construire le ${a('https://www.mantleblockchain.com', 'site web')} avec ${a('https://designers.hubspot.com/docs/hubl/intro-to-hubl', 'Hubspot HubL')} & produire le ${a('https://www.youtube.com/channel/UC-tikvziELaxX6lWmcVcGvA', 'contenu vidéo')}`,
+		]
+	},
     gsoftDate: {
-		'en': 'Sept. 2016 to Dec. 2016 <br/> May 2017 to Aug. 2017',
-		'fr': 'Sept. 2016 à déc. 2016 <br/> mai 2017 à aout 2017'
+		'en': 'Jan. 2018 to April 2018<br/>May 2017 to Aug. 2017<br/>Sept. 2016 to Dec. 2016',
+		'fr': 'Jan. 2018 à avril 2018 <br/>Mai 2017 à aout 2017<br/>Sept. 2016 à déc. 2016 '
 	},
 	gsoftContent: {
 		'en': [
-			'- Developed Officevibe, an Employee Engagement Mesuring Tool',
-			'- Added new UI features using React',
-			'- Developed back end features using C# and MongoDB',
-			'- Fixed bugs across the application'
+			`- Developed ${a('https://www.officevibe.com', 'Officevibe')}, an employee engagement tool`,
+			'- Added new front end features using React/Redux-Saga',
+			'- Improved the statistics module for algorithmic efficiency',
+			'- Developed back end features using C# .NET & MongoDB',
 		],
 		fr: [
-			'- Développer Officevibe, un outil de mesure de l\'engagement',
-			'- Développer des fonctionnalités serveur en C# et avec MongoDB',
-			'- Développer l\'interface de nouvelles fonctionnalités avec React',
-			'- Régler des problèmes d\'utilisation de l\'application',
+			'- Développer des fonctionnalités serveur en C# & avec MongoDB',
+			'- Améliorer l\'efficacité algorithmique du module de statistiques',
+			'- Développer l\'interface de nouvelles fonctionnalités avec React/Redux-Saga',
+			`- Développer ${a('https://www.officevibe.com', 'Officevibe')}, un outil d\'engagement employé`,
 		]
 	},
     shotgunDate: {
@@ -123,16 +145,14 @@ var dict = {
 	},
 	shotgunContent: {
 		'en': [
-			'- Developed Shotgun, a Film And Game Production Planning Web App',
-			'- Added UI features to support film Cuts in the online video player',
-			'- Developed features for a Ruby on Rails web server',
-			'- Fixed many customer reported bugs'
+			`- Developed ${a('https://www.shotgunsoftware.com', 'Shotgun')}, a Film And Game Production Planning Web App`,
+			'- Developed back end features with Ruby on Rails',
+			'- Added front end features to support live film cuts in the web video player',
 		],
 		fr: [
-			'- Développer Shotgun, un logiciel web de planification de projets multimédia',
-			'- Développer des fonctionnalités pour un serveur Ruby on Rails',
-			'- Développer l\'interface pour supporter les coupures dans le lecteur vidéo',
-			'- Régler une multitude de problèmes trouvés par les clients'
+			`- Développer ${a('https://www.shotgunsoftware.com', 'Shotgun')}, un logiciel web de planification de projets multimédia`,
+			'- Développer des fonctionnalités serveur avec Ruby on Rails',
+			'- Développer l\'interface pour supporter la lecture de clips édités en temps réel',
 		]
 	},
 	coveoDate: {
@@ -141,34 +161,30 @@ var dict = {
 	},
 	coveoContent: {
 		'en': [
-			'- Developed a Java cloud platform used to configure the Coveo search engine',
-			'- Developed dynamic user interfaces with Backbone.js and Marionette.js in Typescript',
-			'- Created a mobile UI project during a hackathon and made it ' + a('https://github.com/Coveo/JsAdminMobile', 'open source at Coveo' + icn('social-github')),
-			'- Configured cloud instances on Amazon Web Services'
+			'- Developed Java microservices used to configure the Coveo search engine',
+			'- Developed user interfaces with Backbone.js, Marionette.js & Typescript',
+			`- Created a ${a('https://github.com/Coveo/JsAdminMobile', 'mobile front end project' + icn('social-github'))} during a hackathon`,
 		],
 		fr: [
-			'- Développer un service infonuagique Java pour gérer le moteur de recherche',
-			'- Développer des interfaces web en TypeScript avec Backbone.js et Marionette.js',
-			'- Créer ' + a('https://github.com/Coveo/JsAdminMobile', 'un projet « open source »' + icn('social-github')) + ' d’interface mobile lors d’un hackathon de Coveo',
-			'- Configurer des instances infonuagiques sur Amazon Web Services'
+			'- Développer des microservices Java pour gérer le moteur de recherche',
+			'- Développer des interfaces web en TypeScript avec Backbone.js & Marionette.js',
+			'- Créer ' + a('https://github.com/Coveo/JsAdminMobile', 'un projet « open source »' + icn('social-github')) + ' d’interface mobile lors d’un hackathon',
 		]
 	},
 	seikaDate: {
-		'en': 'January 2014 to August 2014',
-		'fr': 'Janvier 2014 à août 2014 '
+		'en': 'January 2014 to August 2014<br/>June 2013 to August 2013',
+		'fr': 'Janvier 2014 à août 2014<br/>Juin 2013 à août 2013'
 	},
 	seikaContent: {
 		'en': [
-			'- Programmed a custom employee managing website using ASP.Net MVC',
-			'- Optimized the performance of a custom object-relational mapping system',
-			'- Conceived automated unit tests to ensure algorithmic efficiency over time',
-			'- Optimized, standardized and improved existing code'
+			'- Optimized the performance of a custom ORM system',
+			'- Conceived unit tests to ensure algorithmic efficiency',
+			'- Programmed an employee management app using ASP.Net MVC',
 		],
 		'fr': [
-			'- Programmer, concevoir et adapter un site web de gestion d’employés en ASP.Net MVC ',
-			'- Améliorer la performance d’un système de mapping objet-relationnel sur mesure',
-			'- Concevoir des tests unitaires automatisés assurant l’efficience des algorithmes',
-			'- Optimiser, standardiser et améliorer du code existant'
+			'- Améliorer la performance d’un ORM sur mesure',
+			'- Programmer un site web de gestion d’employés en ASP.Net MVC',
+			'- Concevoir des tests unitaires assurant l’efficience des algorithmes',
 		]
 	},
 	uniFormation: {
@@ -176,8 +192,8 @@ var dict = {
 		'fr': 'Baccalauréat en informatique'
 	},
 	uniDate: {
-		'en': 'August 2014 to present',
-		'fr': 'Août 2014 à aujourd’hui'
+		'en': 'August 2014 to Dec 2017',
+		'fr': 'Août 2014 à Déc 2017'
 	},
 	cegFormation: {
 		'en': 'Computer Science Technology',
@@ -190,6 +206,10 @@ var dict = {
 	wbGrant: {
 		'en': 'WB Games excellence grant',
 		'fr': 'Bourse d\'excellence WB Games'
+	},
+	entrepreneurshipGrant: {
+		'en': 'Entrepreneurship grant for my ' + a('https://www.youtube.com/minimalistik', 'YouTube channel' + icn('social-youtube')),
+		'fr': 'Bourse d\'entreprenariat pour ma' + a('https://www.youtube.com/minimalistik', 'chaine YouTube'+ icn('social-youtube'))
 	},
 	admissionGrant: {
 		'en': 'Admission grant',
@@ -234,19 +254,14 @@ var dict = {
 	},
 	cogniboxHackathonContent: {
 		'en': [
-			'Developped a mobile app that helps its users to save money at the grocery store',
-			a('http://www.lapresse.ca/le-nouvelliste/actualites/201601/31/01-4945812-defi-hackathon-trente-six-heures-pour-pondre-un-logiciel.php', 
-            'More info in this local\'s newspaper article on lapresse.ca')
-           
+			'Developped a mobile app that helps its users to save money at the grocery store'   
 		],
 		'fr': [
-			'Développement d\'une application mobile permettant de sauver de l\'argent sur l\'épicerie',
-			a('http://www.lapresse.ca/le-nouvelliste/actualites/201601/31/01-4945812-defi-hackathon-trente-six-heures-pour-pondre-un-logiciel.php', 
-            'Plus d\'information dans cet article de journal local sur lapresse.ca')
+			'Développement d\'une application mobile permettant de sauver de l\'argent sur l\'épicerie'
 		]
 	},
 	coveoBlitz: {
-		'en': 'Participated at Coveo Blitz 2016',
+		'en': 'Attended Coveo Blitz 2016',
 		'fr': 'Participation au Coveo Blitz 2016'
 	},
 	coveoBlitzContent: {
@@ -277,10 +292,10 @@ var dict = {
 	},
 	hackSherbrookeContent: {
 		'en': [
-			'Made an informative mobile app about Sherbrooke\'s events, services and businesses'
+			'Made an informative mobile app about Sherbrooke\'s events, services & businesses'
 		],
 		'fr': [
-			'Création d\'une application mobile à propos des évènements et des services de Sherbrooke'
+			'Création d\'une application mobile à propos des évènements & des services de Sherbrooke'
 		]
 	},
 	hackSh: {
@@ -298,8 +313,8 @@ var dict = {
 		]
 	},
 	audioVideoProjects: {
-		'en': 'Produced many videos and audio recordings',
-		'fr': 'Réalisation de clips vidéo et d\'enregistrements audio'
+		'en': 'Produced many videos & audio recordings',
+		'fr': 'Réalisation de clips vidéo & d\'enregistrements audio'
 	},
 	audioVideoProjectsContent: {
 		'en': [
@@ -334,14 +349,13 @@ function calcData(){
 	lang = $(".lang-dropdown select").val();
 	
 	sideNodes = [
-		{ title: l('address'), content: '6565, Dumas, Montreal<br>(' + l('quebec') + ') H4E 3A1' },
-		{ title: l('permanentAddress'), content: '17, Poirier, Victoriaville<br>(' + l('quebec') + ') G6S 0J1' },
+		{ title: l('address'), content: 'Montreal, QC<br>Canada' },
 		{ title: 'mobile', content: '(819) 350-8903' },
 		{ title: l('links'), content: l('linksValues') },
 		{ title: l('languages'), content: l('languageValues') },
-		{ title: l('programming'), content: 'JavaScript, C#, Java<br>HTML/CSS, Python<br>C++, Ruby' },
-		{ title: l('database'), content: 'MongoDB, MySQL<br>SQL Server, Oracle<br>PostgreSQL' },
-		/*{ title: l('librairies'), content: 'Ionic Framework<br>Underscore.js<br>Marionette.js<br>Backbone.js<br>Angular.js<br>Less.js' },*/
+		{ title: l('programming'), content: 'JavaScript, C#<br>Java, Python' },
+		{ title: l('database'), content: 'MongoDB, SQL<br>' },
+		{ title: l('frameworks'), content: 'Vue.js, React/Redux<br>.NET Core, LINQ<br>Ionic (Angular)<br>LESS/SCSS' }
 	];
 	
 	mainNodes = [
@@ -358,25 +372,30 @@ function calcData(){
 			color: '#2980b9',
 			list: [
 				{
-					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ GSOFT, Montreal',
+					title: '<span class="bold">' + l('softwareDeveloper') + `</span> @ ${a('https://www.mantleblockchain.com', 'Mantle')} (startup), Montreal`,
+					date: l('mantleDate'),
+					content: l('mantleContent')
+				},
+				{
+					title: '<span class="bold">' + l('softwareDeveloper') + `</span> @ ${a('https://www.gsoft.com', 'GSoft')}, Montreal`,
 					date: l('gsoftDate'),
 					content: l('gsoftContent')
 				},
 				{
-					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ Autodesk, Montreal',
+					title: '<span class="bold">' + l('softwareDeveloper') + `</span> @ ${a('https://www.autodesk.com', 'Autodesk')}, Montreal`,
 					date: l('shotgunDate'),
 					content: l('shotgunContent')
 				},
 				{
-					title: '<span class="bold">' + l('softwareDeveloper') + '</span> @ Coveo Solutions Inc., Quebec',
+					title: '<span class="bold">' + l('softwareDeveloper') + `</span> @ ${a('https://www.coveo.com', 'Coveo')}, Quebec`,
 					date: l('coveoDate'),
 					content: l('coveoContent')
-				}/*,
+				},
 				{
-					title: '<span class="bold">' + l('programmerAnalyst') + '</span> @ SEIKA Logiciel, Plessisville',
+					title: '<span class="bold">' + l('programmerAnalyst') + `</span> @ ${a('http://seika.ca', 'SEIKA Logiciel')}, Plessisville`,
 					date: l('seikaDate'),
 					content: l('seikaContent')
-				}*/
+				}
 			]
 		},
 		{
@@ -402,6 +421,11 @@ function calcData(){
 			color: '#16a085',
 			list: [
 				{
+					title: '<span class="bold">' + l('entrepreneurshipGrant') + '</span>',
+					date: '2017',
+					content: ['Université de Sherbrooke']
+				},
+				{
 					title: '<span class="bold">' + l('wbGrant') + '</span>',
 					date: '2016',
 					content: ['Université de Sherbrooke']
@@ -420,12 +444,12 @@ function calcData(){
 					title: '<span class="bold">' + l('merit1') + '</span>',
 					date: '2012',
 					content: ['Cégep de Victoriaville']
-				},
+				},/*
 				{
 					title: '<span class="bold">' + l('mcgillGrant') + '</span>',
 					date: '2011',
 					content: ['Collège Clarétain']
-				},/*
+				},
 				{
 					title: '<span class="bold">' + l('claretainMerit') + '</span>',
 					date: '2011',
@@ -452,7 +476,7 @@ function calcData(){
 					title: '<span class="bold">' + l('coveoBlitz') + '</span>',
 					date: '2016',
 					content: l('coveoBlitzContent')
-				},
+				},/*
 				{
 					title: '<span class="bold">' + l('coveoHackathon') + '</span>',
 					date: '2015',
@@ -462,7 +486,7 @@ function calcData(){
 					title: '<span class="bold">' + l('hackSherbrooke') + '</span>',
 					date: '2015',
 					content: l('hackSherbrookeContent')
-				},
+				},*/
 				{
 					title: '<span class="bold">' + l('hackSh') + '</span>',
 					date: '2015',

@@ -4,6 +4,24 @@ body {
 	font-size: 14px;
 }
 
+div.header .triangle .underline {
+	display: inline-block;
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+div.header .triangle {
+	background-color: #c0392b;
+	display: inline;
+	position: fixed;
+	top: -58px;
+	right: -129px;
+	padding: 80px;
+	padding-bottom: 10px;
+	padding-top: 140px;
+	transform: rotate(53deg);
+}
+
 div.header {
 	width: 100%;
 	background-color: #2c3e50;
@@ -52,7 +70,8 @@ div.header span {
 }
 
 .page1 > .side, .page1 > .content {
-	height: 730px;
+	height: 714px;
+	padding-top: 16px;
 }
 
 .page2 > .side, .page2 > .content {
@@ -64,7 +83,7 @@ div.header span {
 }
 
 .page > .side {
-	width: 23%;
+	width: 19%;
 	display: block;
 	float:left;
 	margin-right: 2%;
@@ -78,7 +97,7 @@ div.header span {
 }
 
 .page > .content {
-	width: 75%;
+	width: 79%;
 	display: block;
 	float: left;
 }
@@ -109,6 +128,10 @@ a {
 .content div {
 	display: block;
 	font-weight: 300;
+}
+
+.content > div {
+	margin-bottom: 16px;
 }
 
 .content div .list .item .header{
@@ -149,7 +172,7 @@ ul{
 	list-style-type: none;
 	margin:0;
 	padding:0;
-	font-style:italic;
+	font-size: 12px;
 }
 
 .footer{
@@ -157,14 +180,10 @@ ul{
 }
 
 .footer div{
-	width: 21%;
+	width: 33%;
 	display: inline-block;
 	text-align: center;
-	margin:0 5%;
-}
-
-.content .content{
-	font-style: italic;
+	margin:0;
 }
 
 .page > .content div span.content, .page > .content div span.list {
@@ -177,6 +196,7 @@ ul{
 
 .footer div:last-child{
 	text-align: right;
+	float: right;
 }
 
 .icon {
