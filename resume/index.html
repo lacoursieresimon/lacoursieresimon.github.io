@@ -11,6 +11,8 @@
 	</head>
 	<body>
         <div class="header">
+			<div class="triangle">
+			</div>
 			<div class="text-block">
 				<span class="title"></span>
 				<span class="subtitle"></span>
@@ -53,6 +55,7 @@
 		
 		function generate(){
 			calcData();
+			$('.header .triangle').html(l('clickInstructions'));
 			$('.text-block .subtitle').html(l('computerScienceStudent') + ' | <a href="mailto:lacoursieresimon@gmail.com">lacoursieresimon@gmail.com</a>')
 			$('.text-block .title').html(name.split(' ')[0].toLowerCase() + '<span class="bold">' + name.split(' ')[1].toLowerCase() + '</span>');
 			
@@ -67,6 +70,7 @@
 				_.each(footers, function(footer){ htmlBuilder += '<div>' + footer + '</div>'; });
 				$($('.footer')[i]).html(htmlBuilder += '<div>' + (i + 1) + '</div>');
 			}
+
 		}
 		
 		function buildMainNode(node){
